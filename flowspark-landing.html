@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flowspark – Automate Conversations. Ignite Growth.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FF6B00;
+      --blue: #007BFF;
+      --dark: #1E1E1E;
+      --light: #FFFFFF;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--light);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      color: var(--orange);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .btn {
+      background: var(--orange);
+      color: white;
+      padding: 0.7rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(255,107,0,0.1));
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .section h3 {
+      font-size: 2rem;
+      color: var(--orange);
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 2rem;
+      text-align: left;
+    }
+    .card h4 {
+      color: var(--blue);
+    }
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flowspark</h1>
+    <nav>
+      <a href="#services" id="nav-services">Services</a>
+      <a href="#demos" id="nav-demos">Demos</a>
+      <a href="#pricing" id="nav-pricing">Pricing</a>
+      <a href="#contact" class="btn" id="nav-cta">Get a Demo</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 id="hero-title">Automate Conversations. Ignite Growth.</h2>
+    <p id="hero-sub">Empower your business with AI-driven chatbots that sell, support, and scale — 24/7.</p>
+    <a href="#contact" class="btn" id="hero-btn">⚡ Get a Free Demo</a>
+  </section>
+
+  <section class="section" id="services">
+    <h3 id="services-title">Our Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>🤖 Web Chatbot</h4>
+        <p id="svc1">Lead-generating bot embedded on your website.</p>
+      </div>
+      <div class="card">
+        <h4>💬 WhatsApp Automation</h4>
+        <p id="svc2">Automated flows for client engagement via WhatsApp.</p>
+      </div>
+      <div class="card">
+        <h4>🔗 CRM Integration</h4>
+        <p id="svc3">Sync chat leads with HubSpot, Pipedrive or Google Sheets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demos">
+    <h3 id="demos-title">Interactive Demos</h3>
+    <p id="demo-sub">See our services in action before you buy.</p>
+    <p>👉 Coming soon with real-time previews.</p>
+  </section>
+
+  <section class="section" id="pricing">
+    <h3 id="pricing-title">Plans & Pricing</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>💎 Starter</h4>
+        <p>$149/month<br><small>Perfect for small businesses</small></p>
+      </div>
+      <div class="card">
+        <h4>🚀 Growth</h4>
+        <p>$349/month<br><small>Includes WhatsApp & CRM integrations</small></p>
+      </div>
+      <div class="card">
+        <h4>🏆 Pro</h4>
+        <p>$649/month<br><small>Full customization & support</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3 id="contact-title">Let’s Automate Your Business</h3>
+    <p>📧 <a href="mailto:hello@flowspark.ai">hello@flowspark.ai</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Flowspark. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith("es")) {
+      document.documentElement.lang = "es";
+      document.getElementById("nav-services").textContent = "Servicios";
+      document.getElementById("nav-demos").textContent = "Demos";
+      document.getElementById("nav-pricing").textContent = "Precios";
+      document.getElementById("nav-cta").textContent = "Solicitar Demo";
+      document.getElementById("hero-title").textContent = "Automatiza conversaciones. Acelera tu crecimiento.";
+      document.getElementById("hero-sub").textContent = "Impulsa tu negocio con chatbots inteligentes que venden, atienden y escalan — 24/7.";
+      document.getElementById("hero-btn").textContent = "⚡ Solicita una Demo Gratis";
+      document.getElementById("services-title").textContent = "Nuestros Servicios";
+      document.getElementById("svc1").textContent = "Bot que captura leads en tu sitio web.";
+      document.getElementById("svc2").textContent = "Flujos automáticos en WhatsApp con IA.";
+      document.getElementById("svc3").textContent = "Conexión de chats con HubSpot, Pipedrive o Sheets.";
+      document.getElementById("demos-title").textContent = "Demos Interactivas";
+      document.getElementById("demo-sub").textContent = "Prueba nuestros servicios antes de contratarlos.";
+      document.getElementById("pricing-title").textContent = "Planes y Precios";
+      document.getElementById("contact-title").textContent = "Automatizamos tu negocio";
+    }
+  </script>
+</body>
+</html>
